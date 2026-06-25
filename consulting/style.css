@@ -1,22 +1,25 @@
-/* AIC Website — shared styles */
+/* stephaniepculver.com — shared styles */
+/* Brand: Midnight Navy / Slate Blue / Warm Gold · DM Serif Display / DM Sans */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy: #0f1f3d;
-  --navy-mid: #1a3260;
-  --blue: #1e4db7;
-  --blue-light: #2d63d8;
-  --accent: #e8531a;
-  --accent-hover: #c94415;
-  --off-white: #f7f8fa;
-  --gray-light: #edf0f5;
-  --gray-mid: #8a93a8;
-  --text: #1a2030;
-  --text-mid: #3d4a60;
-  --line: #d8dde8;
-  --font: 'Georgia', 'Times New Roman', serif;
-  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  --navy: #0D1B2A;
+  --navy-mid: #162330;
+  --blue: #2C5F8A;
+  --blue-light: #3a78ab;
+  --accent: #B8962E;
+  --accent-hover: #9a7d26;
+  --off-white: #F7F6F4;
+  --gray-light: #E9EAEB;
+  --gray-mid: #6B7280;
+  --text: #1C1C1E;
+  --text-mid: #6B7280;
+  --line: #D1D5DB;
+  --font: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --max: 860px;
   --max-wide: 1100px;
 }
@@ -42,25 +45,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 62px;
+  height: 66px;
 }
 .logo {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
   text-decoration: none;
-  letter-spacing: 0.04em;
 }
-.logo span { color: #7eaaff; }
+.logo-name {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+.logo-sub {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 .nav-cta {
   display: inline-block;
   background: var(--accent);
   color: #fff;
-  padding: 8px 20px;
+  padding: 9px 20px;
   border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.88rem;
+  font-weight: 700;
+  font-size: 0.85rem;
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: background 0.18s;
@@ -79,27 +94,27 @@ body {
 }
 .hero-label {
   display: inline-block;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #7eaaff;
-  margin-bottom: 18px;
+  color: var(--accent);
+  margin-bottom: 20px;
 }
 .hero h1 {
-  font-family: var(--font-sans);
-  font-size: clamp(1.9rem, 4vw, 2.8rem);
-  font-weight: 800;
-  line-height: 1.18;
+  font-family: var(--font);
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+  font-weight: 400;
+  line-height: 1.15;
   max-width: 700px;
   margin-bottom: 22px;
 }
 .hero-sub {
-  font-size: 1.15rem;
-  color: #b8c8e8;
+  font-size: 1.12rem;
+  color: rgba(255,255,255,0.72);
   max-width: 580px;
   margin-bottom: 36px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 .btn-primary {
   display: inline-block;
@@ -122,18 +137,18 @@ body {
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  border: 2px solid rgba(255,255,255,0.35);
+  border: 2px solid rgba(255,255,255,0.3);
   margin-left: 12px;
   transition: border-color 0.18s;
 }
-.btn-secondary:hover { border-color: rgba(255,255,255,0.7); }
+.btn-secondary:hover { border-color: rgba(255,255,255,0.65); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* ─── PROOF BAR ─── */
 .proof-bar {
   background: var(--navy-mid);
-  padding: 22px 24px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 24px 24px;
+  border-top: 1px solid rgba(255,255,255,0.07);
 }
 .proof-bar-inner {
   max-width: var(--max-wide);
@@ -149,16 +164,17 @@ body {
 }
 .proof-stat .num {
   display: block;
-  font-size: 1.65rem;
-  font-weight: 800;
-  color: #7eaaff;
+  font-family: var(--font-sans);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
   line-height: 1;
 }
 .proof-stat .lbl {
   display: block;
-  font-size: 0.78rem;
-  color: #8a9dbf;
-  margin-top: 4px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 5px;
   letter-spacing: 0.03em;
 }
 
@@ -174,7 +190,7 @@ body {
   max-width: var(--max-wide);
 }
 .section-label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -182,30 +198,30 @@ body {
   margin-bottom: 10px;
 }
 .section h2 {
-  font-family: var(--font-sans);
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  font-weight: 800;
+  font-family: var(--font);
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: 16px;
   color: var(--navy);
 }
 .section-intro {
-  font-size: 1.08rem;
+  font-size: 1.06rem;
   color: var(--text-mid);
   max-width: 620px;
   margin-bottom: 48px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 .bg-light { background: var(--off-white); }
 .bg-navy { background: var(--navy); color: #fff; }
 .bg-navy h2 { color: #fff; }
-.bg-navy .section-label { color: #7eaaff; }
-.bg-navy .section-intro { color: #b8c8e8; }
+.bg-navy .section-label { color: var(--accent); }
+.bg-navy .section-intro { color: rgba(255,255,255,0.7); }
 
 /* ─── SPRINT CARDS ─── */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 24px;
 }
 .card {
@@ -217,7 +233,7 @@ body {
   flex-direction: column;
 }
 .card-tag {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -225,21 +241,22 @@ body {
   margin-bottom: 12px;
 }
 .card h3 {
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-family: var(--font);
+  font-size: 1.2rem;
+  font-weight: 400;
   color: var(--navy);
   margin-bottom: 10px;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 .card p {
   font-size: 0.93rem;
   color: var(--text-mid);
-  line-height: 1.6;
+  line-height: 1.65;
   flex: 1;
   margin-bottom: 20px;
 }
 .card-proof {
-  font-size: 0.83rem;
+  font-size: 0.82rem;
   color: var(--text-mid);
   border-top: 1px solid var(--line);
   padding-top: 14px;
@@ -251,7 +268,7 @@ body {
   display: inline-block;
   color: var(--blue);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   text-decoration: none;
   margin-top: auto;
 }
@@ -265,7 +282,7 @@ body {
   margin-bottom: 48px;
 }
 .two-col h3 {
-  font-size: 1rem;
+  font-size: 0.97rem;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 14px;
@@ -280,14 +297,14 @@ body {
   border-bottom: 1px solid var(--line);
   font-size: 0.95rem;
   color: var(--text-mid);
-  padding-left: 18px;
+  padding-left: 20px;
   position: relative;
 }
 .two-col ul li::before {
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--blue);
+  color: var(--accent);
   font-weight: 700;
 }
 .two-col ul li:last-child { border-bottom: none; }
@@ -301,7 +318,7 @@ body {
   margin-bottom: 48px;
 }
 .deliverable-box h3 {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -326,7 +343,7 @@ body {
   flex-shrink: 0;
 }
 
-/* ─── PROOF SECTION ─── */
+/* ─── PROOF CALLOUT ─── */
 .proof-callout {
   background: var(--navy);
   color: #fff;
@@ -339,9 +356,10 @@ body {
   flex-wrap: wrap;
 }
 .proof-callout .proof-number {
+  font-family: var(--font-sans);
   font-size: 3rem;
-  font-weight: 900;
-  color: #7eaaff;
+  font-weight: 700;
+  color: var(--accent);
   line-height: 1;
   flex-shrink: 0;
 }
@@ -352,7 +370,7 @@ body {
 }
 .proof-callout .proof-text p {
   font-size: 0.95rem;
-  color: #b8c8e8;
+  color: rgba(255,255,255,0.68);
   line-height: 1.6;
 }
 
@@ -364,26 +382,27 @@ body {
   flex-wrap: wrap;
 }
 .bio-text h3 {
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-family: var(--font);
+  font-size: 1.5rem;
+  font-weight: 400;
   color: var(--navy);
   margin-bottom: 6px;
 }
 .bio-text .title-line {
   font-size: 0.9rem;
   color: var(--text-mid);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .bio-text p {
   font-size: 0.97rem;
   color: var(--text-mid);
-  line-height: 1.7;
-  margin-bottom: 12px;
+  line-height: 1.75;
+  margin-bottom: 14px;
 }
 .bio-link {
   display: inline-block;
   color: var(--blue);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9rem;
   text-decoration: none;
   margin-top: 8px;
@@ -395,20 +414,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 12px;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 .cred-pill {
   background: var(--gray-light);
   border: 1px solid var(--line);
   color: var(--text-mid);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
   padding: 6px 14px;
   border-radius: 100px;
   letter-spacing: 0.01em;
 }
 
-/* ─── SCOPING / WHAT'S INCLUDED ─── */
+/* ─── SCOPE GRID ─── */
 .scope-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -422,9 +442,10 @@ body {
   border-radius: 6px;
 }
 .scope-item .scope-num {
+  font-family: var(--font-sans);
   font-size: 1.8rem;
-  font-weight: 900;
-  color: #d8e0f0;
+  font-weight: 700;
+  color: var(--gray-light);
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -443,22 +464,23 @@ body {
 /* ─── CTA BAND ─── */
 .cta-band {
   background: var(--navy);
-  padding: 64px 24px;
+  padding: 72px 24px;
   text-align: center;
   color: #fff;
 }
 .cta-band h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 800;
-  margin-bottom: 14px;
+  font-family: var(--font);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 400;
+  margin-bottom: 16px;
   color: #fff;
 }
 .cta-band p {
   font-size: 1.05rem;
-  color: #b8c8e8;
+  color: rgba(255,255,255,0.68);
   max-width: 520px;
-  margin: 0 auto 32px;
-  line-height: 1.6;
+  margin: 0 auto 36px;
+  line-height: 1.65;
 }
 .cta-band .btn-primary { font-size: 1.05rem; padding: 15px 36px; }
 
@@ -475,7 +497,7 @@ body {
   flex-wrap: wrap;
 }
 .offer-meta h3 {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -483,8 +505,9 @@ body {
   margin-bottom: 8px;
 }
 .offer-meta .price {
+  font-family: var(--font-sans);
   font-size: 1.7rem;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--navy);
   line-height: 1;
   margin-bottom: 4px;
@@ -502,24 +525,26 @@ body {
 
 /* ─── FOOTER ─── */
 footer {
-  background: #0a1628;
-  color: #8a93a8;
+  background: #0a131d;
+  color: var(--gray-mid);
   padding: 36px 24px;
   text-align: center;
   font-size: 0.85rem;
 }
-footer a { color: #8a93a8; text-decoration: none; }
+footer a { color: var(--gray-mid); text-decoration: none; }
 footer a:hover { color: #fff; }
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 640px) {
   .hero { padding: 56px 20px 48px; }
-  .hero h1 { font-size: 1.75rem; }
+  .hero h1 { font-size: 1.9rem; }
   .two-col { grid-template-columns: 1fr; gap: 28px; }
   .offer-box { flex-direction: column; gap: 20px; }
   .proof-callout { flex-direction: column; gap: 16px; }
   .bio-block { flex-direction: column; }
   .btn-secondary { margin-left: 0; }
   .section { padding: 52px 20px; }
-  .cta-band { padding: 48px 20px; }
+  .cta-band { padding: 56px 20px; }
+  .proof-bar-inner { gap: 24px 32px; }
+  .proof-stat .num { font-size: 1.35rem; }
 }
