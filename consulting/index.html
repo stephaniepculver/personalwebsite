@@ -15,7 +15,13 @@
       <span class="logo-name">Stephanie Culver</span>
       <span class="logo-sub">AI Consulting</span>
     </a>
-    <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="nav-cta" target="_blank" rel="noopener">Schedule a Call</a>
+    <div class="nav-links" id="nav-links">
+      <a href="/about" class="nav-link">About</a>
+      <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="nav-cta" target="_blank" rel="noopener">Schedule a Call</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </header>
 
@@ -89,7 +95,7 @@
   <div class="section-inner section-wide">
     <div class="section-label">Fixed-Scope Sprints</div>
     <h2>Three sprints. Four to six weeks. Clear deliverable.</h2>
-    <p class="section-intro">Each sprint is fixed scope, fixed price, and ends with a concrete deliverable — not a strategy deck. $15K–$25K with no ongoing commitment required.</p>
+    <p class="section-intro">Each sprint is fixed scope and ends with a concrete deliverable — not a strategy deck. No retainer required.</p>
 
     <div class="card-grid">
       <div class="card">
@@ -164,5 +170,10 @@
   <p>© 2026 Stephanie Culver &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/stephaniepculver/" target="_blank" rel="noopener">LinkedIn</a></p>
 </footer>
 
+<script>
+const toggle = document.getElementById('nav-toggle');
+const links = document.getElementById('nav-links');
+toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
 </body>
 </html>

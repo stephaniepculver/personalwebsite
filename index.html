@@ -20,8 +20,13 @@
       <span class="logo-name">Stephanie Culver</span>
       <span class="logo-sub">AI Consulting</span>
     </a>
-    <a href="/about" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88rem;font-weight:600;letter-spacing:0.02em;transition:color 0.18s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">About</a>
-    <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="nav-cta" target="_blank" rel="noopener">Schedule a Call</a>
+    <div class="nav-links" id="nav-links">
+      <a href="/about" class="nav-link">About</a>
+      <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="nav-cta" target="_blank" rel="noopener">Schedule a Call</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </header>
 
@@ -58,16 +63,24 @@
       <span class="num">$35M</span>
       <span class="lbl">Capex avoidance — Best Buy</span>
     </div>
+    <div class="proof-stat">
+      <span class="num">CTO-aligned</span>
+      <span class="lbl">AI strategy standardized — Best Buy CTO</span>
+    </div>
+    <div class="proof-stat">
+      <span class="num">Value Flywheel</span>
+      <span class="lbl">First cloud platform built — Liberty Mutual</span>
+    </div>
   </div>
 </div>
 
 <!-- BODY COPY -->
 <section class="section bg-light">
   <div class="section-inner">
-    <p style="font-size: 1.13rem; line-height: 1.8; color: var(--text-mid); max-width: 640px;">
+    <p style="font-size: 1.13rem; line-height: 1.8; color: var(--text-mid);">
       You don't hire a consultant to hear about best practices. You hire one to make a specific, expensive problem go away — fast, with accountability, and a model your team owns after they leave.
     </p>
-    <p style="font-size: 1.13rem; line-height: 1.8; color: var(--text-mid); max-width: 640px; margin-top: 20px;">
+    <p style="font-size: 1.13rem; line-height: 1.8; color: var(--text-mid); margin-top: 20px;">
       That's the only kind of engagement I take. Four-to-six week fixed-scope sprints. Fixed price. A concrete deliverable at the end. No retainer. No scope creep.
     </p>
   </div>
@@ -81,7 +94,7 @@
 
     <div class="card-grid">
       <div class="card">
-        <div class="card-tag">Cloud ROI Sprint — $15K–$25K</div>
+        <div class="card-tag">Cloud ROI Sprint</div>
         <h3>Quantify your cloud savings opportunity in 4 weeks</h3>
         <p>Your CFO is asking hard questions about the cloud bill. In four weeks, you'll have a quantified savings roadmap and a showback model that makes every dollar of spend accountable.</p>
         <div class="card-proof">
@@ -91,7 +104,7 @@
       </div>
 
       <div class="card">
-        <div class="card-tag">AI Governance Sprint — $15K–$25K</div>
+        <div class="card-tag">AI Governance Sprint</div>
         <h3>Build an AI operating model before the incident forces one</h3>
         <p>Engineers are using AI tools with no standard or security sign-off. In four weeks, you'll have an enterprise AI operating model and a 60-day implementation roadmap.</p>
         <div class="card-proof">
@@ -101,7 +114,7 @@
       </div>
 
       <div class="card">
-        <div class="card-tag">Platform Velocity Sprint — $15K–$25K</div>
+        <div class="card-tag">Platform Velocity Sprint</div>
         <h3>Find and fix the constraint bottlenecking your developers</h3>
         <p>The platform team is the bottleneck. In four to six weeks, you'll have DORA benchmarks, your #1 constraint identified, and a 90-day improvement roadmap.</p>
         <div class="card-proof">
@@ -115,9 +128,11 @@
 
 <!-- BOTTOM CTA -->
 <div class="cta-band">
-  <h2>Schedule a 30-minute call</h2>
-  <p>A 30-minute call is enough to know if there's a fit. No commitment required.</p>
-  <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="btn-primary" target="_blank" rel="noopener">Schedule a 30-Minute Call →</a>
+  <div class="cta-band-inner">
+    <h2>Schedule a 30-minute call</h2>
+    <p>A 30-minute call is enough to know if there's a fit. No commitment required.</p>
+    <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="btn-primary" target="_blank" rel="noopener">Schedule a 30-Minute Call →</a>
+  </div>
 </div>
 
 <!-- BIO -->
@@ -145,5 +160,10 @@
   <p>© 2026 Stephanie Culver &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/stephaniepculver/" target="_blank" rel="noopener">LinkedIn</a></p>
 </footer>
 
+<script>
+const toggle = document.getElementById('nav-toggle');
+const links = document.getElementById('nav-links');
+toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
 </body>
 </html>
