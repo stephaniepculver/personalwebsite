@@ -31,6 +31,21 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://stephaniepculver.com/case-studies/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://stephaniepculver.com/case-studies/construction-company/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stephaniepculver.com/case-studies/coaching-consultancy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://stephaniepculver.com/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
