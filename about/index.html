@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Stephanie Culver</title>
+  <meta name="description" content="Fractional CTO &amp; AI Advisor with 15 years at Fortune 50 companies. $30M run rate reduction. 10x ROI. Now helping mid-market teams get the same results.">
+  <link rel="stylesheet" href="../consulting/style.css">
+  <style>
+
+    /* ─── ABOUT HERO: split portrait + headline ─── */
+    .about-hero {
+      background: var(--navy);
+      color: #fff;
+    }
+    .about-hero-inner {
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+    }
+    .about-hero-photo {
+      position: relative;
+      overflow: hidden;
+      min-height: 480px;
+    }
+    /* Replace this placeholder element with an <img> once the headshot is available.
+       Suggested path: /assets/images/stephanie-culver-headshot.jpg
+       Suggested attributes: width="100%" height="100%" style="object-fit:cover;object-position:center top;display:block;" */
+    .about-hero-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      background: linear-gradient(160deg, var(--navy-mid) 0%, #1a2e44 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.25);
+    }
+    .about-hero-photo-placeholder svg {
+      opacity: 0.2;
+    }
+    .about-hero-photo-placeholder span {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .about-hero-text {
+      padding: 80px 64px 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .about-hero-text .hero-label {
+      margin-bottom: 24px;
+    }
+    .about-hero-text h1 {
+      font-family: var(--font);
+      font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+      font-weight: 400;
+      line-height: 1.18;
+      margin-bottom: 28px;
+      color: #fff;
+    }
+    .about-hero-text .hero-sub {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* ─── THE STORY ─── */
+    .story-section {
+      padding: 80px 24px;
+      background: var(--off-white);
+    }
+    .story-section .section-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .story-section .section-h2 {
+      font-family: var(--font);
+      font-size: clamp(1.65rem, 3vw, 2.1rem);
+      color: var(--navy);
+      font-weight: 400;
+      margin-bottom: 36px;
+      line-height: 1.25;
+    }
+    .story-section p {
+      font-size: 1.06rem;
+      color: var(--text-mid);
+      line-height: 1.88;
+      margin-bottom: 22px;
+    }
+    .story-section p:last-child { margin-bottom: 0; }
+
+    /* ─── HOW I WORK ─── */
+    .how-section {
+      padding: 80px 24px;
+      background: #fff;
+    }
+    .how-section .section-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .how-section .section-h2 {
+      font-family: var(--font);
+      font-size: clamp(1.65rem, 3vw, 2.1rem);
+      color: var(--navy);
+      font-weight: 400;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .how-intro {
+      font-size: 1.06rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 44px;
+      max-width: 640px;
+    }
+    .problem-block {
+      padding: 30px 34px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      margin-bottom: 18px;
+    }
+    .problem-block h3 {
+      font-family: var(--font);
+      font-size: 1.18rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .problem-block p {
+      font-size: 0.97rem;
+      color: var(--text-mid);
+      line-height: 1.78;
+    }
+    .how-footer {
+      margin-top: 36px;
+      padding: 26px 34px;
+      background: var(--off-white);
+      border-radius: 6px;
+      border: 1px solid var(--line);
+    }
+    .how-footer p {
+      font-size: 1.02rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+
+    /* ─── BY THE NUMBERS ─── */
+    .numbers-section {
+      padding: 80px 24px;
+      background: var(--navy);
+      color: #fff;
+    }
+    .numbers-section .section-inner {
+      max-width: var(--max-wide);
+      margin: 0 auto;
+    }
+    .numbers-section .section-label { color: var(--accent); }
+    .numbers-section .section-h2 {
+      font-family: var(--font);
+      font-size: clamp(1.65rem, 3vw, 2.1rem);
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 48px;
+      line-height: 1.25;
+    }
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .number-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 28px 28px;
+      transition: background 0.18s;
+    }
+    .number-card:hover {
+      background: rgba(255,255,255,0.09);
+    }
+    .number-card .num {
+      font-family: var(--font-sans);
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .number-card .lbl {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.62);
+      line-height: 1.5;
+    }
+
+    /* ─── BEYOND THE WORK ─── */
+    .beyond-section {
+      padding: 80px 24px;
+      background: var(--off-white);
+    }
+    .beyond-section .section-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .beyond-section .section-h2 {
+      font-family: var(--font);
+      font-size: clamp(1.65rem, 3vw, 2.1rem);
+      color: var(--navy);
+      font-weight: 400;
+      margin-bottom: 36px;
+      line-height: 1.25;
+    }
+    .beyond-section p {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 22px;
+    }
+    .beyond-section p:last-child { margin-bottom: 0; }
+
+    /* ─── CTA ─── */
+    .cta-section {
+      padding: 88px 24px;
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: var(--font);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .cta-section p {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 560px;
+      margin: 0 auto 44px;
+      line-height: 1.75;
+    }
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .about-hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .about-hero-photo {
+        min-height: 340px;
+        max-height: 400px;
+      }
+      .about-hero-photo-placeholder {
+        min-height: 340px;
+      }
+      .about-hero-text {
+        padding: 56px 32px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .about-hero-text {
+        padding: 44px 20px;
+      }
+      .numbers-grid {
+        grid-template-columns: 1fr;
+      }
+      .problem-block {
+        padding: 24px 20px;
+      }
+      .how-footer {
+        padding: 22px 20px;
+      }
+      .cta-section { padding: 64px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav>
+    <a href="/" class="logo">
+      <span class="logo-name">Stephanie Culver</span>
+      <span class="logo-sub">AI Consulting</span>
+    </a>
+    <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="nav-cta" target="_blank" rel="noopener">Schedule a Call</a>
+  </nav>
+</header>
+
+<!-- HERO: portrait + headline split -->
+<section class="about-hero">
+  <div class="about-hero-inner">
+    <div class="about-hero-photo">
+      <!--
+        PHOTO PLACEHOLDER — replace this div with:
+        <img src="/assets/images/stephanie-culver-headshot.jpg"
+             alt="Stephanie Culver in a peony field"
+             width="100%" height="100%"
+             style="object-fit:cover;object-position:center top;display:block;">
+        Upload the peony field headshot to /assets/images/ and update this element.
+      -->
+      <div class="about-hero-photo-placeholder" aria-hidden="true">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="24" r="14" fill="white"/>
+          <ellipse cx="32" cy="56" rx="24" ry="14" fill="white"/>
+        </svg>
+        <span>Photo coming soon</span>
+      </div>
+    </div>
+    <div class="about-hero-text">
+      <span class="hero-label">About Stephanie</span>
+      <h1>I build the AI and cloud infrastructure that makes companies operate at a different level.</h1>
+      <p class="hero-sub">Fractional CTO &amp; AI Advisor. 15 years at Fortune 50 companies. Now helping mid-market teams get the same results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE STORY -->
+<section class="story-section">
+  <div class="section-inner">
+    <div class="section-label">The Story</div>
+    <h2 class="section-h2">Most consultants tell you what to do. I've spent 15 years doing it.</h2>
+    <p>As Director of Engineering at Best Buy, I led the platform transformation that reduced annual run rate by $30M, avoided $35M in capital expense, and delivered a 10x return on a $9M governance investment — while building and running a 70-person global engineering organization across the US and India.</p>
+    <p>I designed and ran the AI tooling evaluation that standardized Best Buy on Microsoft Copilot and introduced agentic engineering practices across the org. I took application provisioning from 41 days to 2 hours by rebuilding the standards, not just the tools. I navigated the Broadcom/VMware acquisition without losing delivery momentum — reducing financial exposure by 80% while keeping a $30M cloud transformation on track.</p>
+    <p>Before Best Buy, at Target, I built the reliability platform that cut incident impact by 56% and delivered the company's first clean Thanksgiving weekend in 30 years — work that earned Board of Directors recognition.</p>
+    <p>That experience — running real budgets, leading real teams, delivering results that appeared on board slides — is what I bring to clients now.</p>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section class="how-section">
+  <div class="section-inner">
+    <div class="section-label">How I Work</div>
+    <h2 class="section-h2">Most clients come to me with one of three problems.</h2>
+    <p class="how-intro">I work with mid-market companies and PE-backed teams as a fractional AI and engineering advisor.</p>
+
+    <div class="problem-block">
+      <h3>Cloud costs that have gotten out of control.</h3>
+      <p>Migration projects that seemed like they'd pay off but haven't. Spend that grows with headcount instead of with revenue. I've built the governance models and cost showback frameworks that make cloud spend accountable — and I know how to translate that into $30M in annual savings.</p>
+    </div>
+
+    <div class="problem-block">
+      <h3>AI they want to implement but don't know how to govern.</h3>
+      <p>Every leadership team is being asked about AI. Most are watching their engineers experiment ad hoc without standards, security frameworks, or a way to measure whether it's working. I've built this playbook at scale. I can help you deploy it.</p>
+    </div>
+
+    <div class="problem-block">
+      <h3>Engineering organizations that aren't moving fast enough.</h3>
+      <p>Velocity problems that feel like people problems but are usually process and platform problems. I find the actual constraint — and fix it.</p>
+    </div>
+
+    <div class="how-footer">
+      <p>Most engagements start with a focused audit: 2–4 weeks, a concrete prioritized action list, no vendor kickbacks. From there, I can go hands-on with implementation or enable your team to carry it forward.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BY THE NUMBERS -->
+<section class="numbers-section">
+  <div class="section-inner">
+    <div class="section-label">By the Numbers</div>
+    <h2 class="section-h2">Results I've delivered. Not projections.</h2>
+    <div class="numbers-grid">
+      <div class="number-card">
+        <div class="num">$30M</div>
+        <div class="lbl">Annual run rate reduction</div>
+      </div>
+      <div class="number-card">
+        <div class="num">$35M</div>
+        <div class="lbl">Capex avoided</div>
+      </div>
+      <div class="number-card">
+        <div class="num">10x ROI</div>
+        <div class="lbl">On $9M governance investment</div>
+      </div>
+      <div class="number-card">
+        <div class="num">41 days → 2 hrs</div>
+        <div class="lbl">App provisioning time</div>
+      </div>
+      <div class="number-card">
+        <div class="num">56%</div>
+        <div class="lbl">Incident impact reduction</div>
+      </div>
+      <div class="number-card">
+        <div class="num">80%</div>
+        <div class="lbl">VMware/Broadcom risk reduction</div>
+      </div>
+      <div class="number-card">
+        <div class="num">70-person</div>
+        <div class="lbl">Global engineering org built and run</div>
+      </div>
+      <div class="number-card">
+        <div class="num">Board</div>
+        <div class="lbl">Board of Directors recognition — Target, Cyber Week</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND THE WORK -->
+<section class="beyond-section">
+  <div class="section-inner">
+    <div class="section-label">Beyond the Work</div>
+    <h2 class="section-h2">What the resume doesn't capture.</h2>
+    <p>I'm a 3x U.S. National Synchronized Skating Champion and former ISU World Championships competitor. Fifteen years of elite competition taught me things business school doesn't: how to perform under pressure, how to execute technical complexity in real time, and how to come back from setbacks without losing your standards.</p>
+    <p>I volunteer as a Head Judge for Technovation[MN], mentoring high school girls building technology and AI solutions to real-world problems.</p>
+    <p>I hold a Master of Liberal Arts in Information Technology and a Graduate Certificate in Strategic Management from Harvard University, and a BS in Business Administration <em>magna cum laude</em> from Northeastern University.</p>
+    <p>I'm based in Minneapolis–St. Paul, Minnesota, and work remotely with clients across the US.</p>
+  </div>
+</section>
+
+<!-- CTA: LET'S TALK -->
+<section class="cta-section">
+  <h2>Let's Talk</h2>
+  <p>If your company is navigating a cloud migration, building an AI operating model, or trying to move your engineering org faster — I'd welcome a conversation.</p>
+  <div class="cta-actions">
+    <!-- Primary CTA: replace with Calendly URL when Stephanie provides it -->
+    <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="btn-primary" target="_blank" rel="noopener">Book a 30-minute call →</a>
+    <a href="mailto:stephsk8s@gmail.com" class="btn-secondary">Contact me</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Stephanie Culver &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/stephaniepculver/" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
