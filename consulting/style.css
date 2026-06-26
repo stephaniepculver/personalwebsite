@@ -231,6 +231,18 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 24px;
 }
+#sprints .card-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: 12px;
+  gap: 24px;
+}
+#sprints .card-grid .card {
+  flex: 0 0 250px;
+}
 .card {
   background: #fff;
   border: 1px solid var(--line);
