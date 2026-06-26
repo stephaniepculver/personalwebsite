@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>75% Less Payroll Effort — AI for Family-Owned Construction | Stephanie Culver</title>
+  <meta name="description" content="How a family-owned construction company reduced payroll processing effort by 75% and invoice time by 60% using locally-deployed AI. Case study by Stephanie Culver, Fractional CTO.">
+  <link rel="canonical" href="https://stephaniepculver.com/case-studies/construction-company/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stephaniepculver.com/case-studies/construction-company/">
+  <meta property="og:title" content="75% Less Payroll Effort — AI for Family-Owned Construction | Stephanie Culver">
+  <meta property="og:description" content="How a family-owned construction company reduced payroll processing effort by 75% and invoice time by 60% using locally-deployed AI. Case study by Stephanie Culver, Fractional CTO.">
+  <meta property="og:site_name" content="Stephanie Culver Advisory">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="75% Less Payroll Effort — AI for Family-Owned Construction | Stephanie Culver">
+  <meta name="twitter:description" content="How a family-owned construction company reduced payroll processing effort by 75% and invoice time by 60% using locally-deployed AI. Case study by Stephanie Culver, Fractional CTO.">
+  <link rel="stylesheet" href="../../consulting/style.css">
+  <style>
+    .author-byline {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin: 40px 0 32px;
+    }
+    .author-info .author-name { font-weight: 700; color: var(--navy); font-size: 0.97rem; }
+    .author-info .author-title { font-size: 0.85rem; color: var(--text-mid); margin-top: 2px; }
+    .author-info a { color: var(--blue); text-decoration: none; font-weight: 600; font-size: 0.85rem; display: inline-block; margin-top: 6px; }
+    .author-info a:hover { text-decoration: underline; }
+    .pull-quote {
+      border-left: 4px solid var(--accent);
+      padding: 16px 24px;
+      margin: 28px 0;
+      background: var(--off-white);
+      border-radius: 0 4px 4px 0;
+    }
+    .pull-quote p {
+      font-family: var(--font);
+      font-size: 1.12rem;
+      color: var(--navy);
+      font-style: italic;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .results-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 0.95rem; }
+    .results-table th { background: var(--navy); color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .results-table td { padding: 14px 16px; border-bottom: 1px solid var(--line); color: var(--text-mid); vertical-align: top; line-height: 1.5; }
+    .results-table tr:last-child td { border-bottom: none; }
+    .results-table td:first-child { font-weight: 600; color: var(--navy); width: 30%; }
+    .results-table td strong { color: var(--accent); font-weight: 700; }
+    .case-study-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .case-study-links a {
+      display: block;
+      padding: 22px 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.93rem;
+      line-height: 1.45;
+      transition: border-color 0.18s;
+    }
+    .case-study-links a:hover { border-color: var(--blue); }
+    .case-study-links .link-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 7px;
+    }
+    .faq-list { margin-top: 8px; }
+    .faq-item { padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 { font-family: var(--font); font-size: 1.15rem; font-weight: 400; color: var(--navy); margin-bottom: 12px; line-height: 1.35; }
+    .faq-item p { font-size: 0.97rem; color: var(--text-mid); line-height: 1.7; }
+    @media (max-width: 640px) {
+      .case-study-links { grid-template-columns: 1fr; }
+      .results-table td:first-child { width: auto; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Case Study",
+    "headline": "75% Less Payroll Effort — How a Family-Owned Construction Company Reclaimed Their Evenings with AI",
+    "description": "A family-owned construction company cut payroll processing effort by 75% and invoice generation time by 60% after working with Stephanie Culver as Fractional CTO to deploy locally-hosted AI matched to their actual operations.",
+    "author": {
+      "@type": "Person",
+      "name": "Stephanie Culver",
+      "jobTitle": "AI Business Consultant | Fractional CTO",
+      "url": "https://stephaniepculver.com/about/",
+      "sameAs": "https://www.linkedin.com/in/stephaniepculver/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Stephanie Culver Advisory",
+      "url": "https://stephaniepculver.com/"
+    },
+    "datePublished": "2026-06-26",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://stephaniepculver.com/case-studies/construction-company/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does AI implementation take for a small business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most small businesses, an initial AI implementation targeting one or two specific workflows takes four to twelve weeks. A focused engagement deploying AI for payroll processing, invoice generation, or research tasks can be live in six to eight weeks — including model selection, staff training, and workflow integration. The timeline depends on how complex the existing systems are and how much change management is required. The construction company in this case study saw meaningful results within the first few months of engagement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a large IT team to implement AI in a construction company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Most AI implementations for small and mid-sized construction businesses do not require a dedicated IT team. Modern AI tools can be deployed locally — running on hardware you already own, with no cloud subscription required — and configured to match your existing workflows. What you need is someone who understands both the business processes and the AI tooling. That's the fractional CTO model: an experienced AI implementation specialist who designs the system, trains your staff, and hands off a solution your team can operate without ongoing technical overhead."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can AI really help with payroll and invoicing for a construction business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — payroll processing and invoice generation are among the highest-value AI use cases for construction businesses. Both tasks are structured, repetitive, and time-consuming; exactly the profile where AI performs best. AI can handle data gathering, calculation, document generation, and formatting, leaving the owner to review and approve rather than execute. In this case study, payroll processing effort dropped 75% and invoice generation time dropped 60% — both through AI handling the work that didn't require owner judgment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my business data safe when using AI locally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Local AI deployment means your data never leaves your network. Unlike cloud-based AI tools that send your data to a third-party server for processing, locally-hosted models run entirely on your own hardware. For a construction business handling employee data, financial records, and client information, this is often the right architecture — not because cloud AI is inherently unsafe, but because local deployment eliminates the data residency and third-party access questions entirely."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a fractional CTO and does my construction business need one?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A fractional CTO is an experienced technology leader who works with your business on a part-time basis — giving you senior-level AI and technology strategy without the cost of a full-time executive hire. For a construction business, this typically means someone who identifies where AI can save the most owner time, selects the right tools, oversees implementation, and trains your team. If your owners are spending significant time on tasks that could be automated — payroll, invoicing, scheduling, lodging research — a fractional CTO engagement pays for itself quickly."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav>
+    <a href="/" class="logo">
+      <span class="logo-name">Stephanie Culver</span>
+      <span class="logo-sub">AI Consulting</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/about" class="nav-link">About</a>
+      <span class="nav-section-label">Sprints</span>
+      <a href="/consulting/ai-transformation-sprint.html" class="nav-link">AI Transformation</a>
+      <a href="/consulting/ai-governance-sprint.html" class="nav-link">AI Governance</a>
+      <a href="/consulting/platform-velocity-sprint.html" class="nav-link">Platform Velocity</a>
+      <a href="/consulting/cloud-roi-sprint.html" class="nav-link">Cloud ROI</a>
+      <span class="nav-section-label">Case Studies</span>
+      <a href="/case-studies/construction-company/" class="nav-link" aria-current="page">Construction Company</a>
+      <a href="/case-studies/coaching-consultancy/" class="nav-link">Coaching Consultancy</a>
+      <a href="/faq" class="nav-link">FAQ</a>
+      <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<section class="hero" style="padding: 60px 24px 52px;">
+  <div class="hero-inner">
+    <span class="hero-label">Case Study · Construction · Fractional CTO</span>
+    <h1>They built a great business — and then found they couldn't stop working inside it.</h1>
+    <p class="hero-sub">How a family-owned construction company cut payroll effort by 75%, invoicing time by 60%, and got their evenings back — with locally-deployed AI matched to their actual operations.</p>
+    <div class="hero-actions">
+      <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="btn-primary" target="_blank" rel="noopener">Schedule a Free 30-Minute Call →</a>
+      <a href="/#sprints" class="btn-secondary">See Our Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-stat">
+      <span class="num">75%</span>
+      <span class="lbl">Reduction in payroll processing effort from owners</span>
+    </div>
+    <div class="proof-stat">
+      <span class="num">60%</span>
+      <span class="lbl">Faster invoice generation</span>
+    </div>
+    <div class="proof-stat">
+      <span class="num">Hours → Approve</span>
+      <span class="lbl">Employee lodging research per booking</span>
+    </div>
+    <div class="proof-stat">
+      <span class="num">Local AI</span>
+      <span class="lbl">Data stays on-premise — no cloud exposure</span>
+    </div>
+  </div>
+</div>
+
+<section class="section bg-light">
+  <div class="section-inner">
+    <div class="section-label">The Problem</div>
+    <h2>A Business That Worked — And Owners Who Couldn't Stop Working</h2>
+    <p class="section-intro">The construction company was healthy. Crews were deployed, projects got done, clients were satisfied. The business itself wasn't the problem. The problem was what running it required of the owners every single day — evenings included.</p>
+
+    <div class="two-col">
+      <div>
+        <h3>Where the time was going</h3>
+        <ul>
+          <li>Field crews moving between job sites meant constant manual lodging research — hours per booking</li>
+          <li>Invoices generated manually, one by one, for every completed job</li>
+          <li>Payroll required direct owner involvement every cycle, consuming evenings and weekends</li>
+          <li>Administrative burden concentrated on ownership rather than distributed across the team</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What the owners actually wanted</h3>
+        <ul>
+          <li>Evenings and weekends that weren't spent doing admin work</li>
+          <li>A business that ran without them being the bottleneck for every back-office function</li>
+          <li>Not another software subscription — a real operational shift</li>
+          <li>Solutions matched to their actual workflows, not a generic enterprise template</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">The Approach</div>
+    <h2>Right-Sized AI — Not Enterprise Software, Not a One-Size-Fits-All Tool</h2>
+    <p class="section-intro">The engagement began in March 2026 with a direct mandate: reduce the operational burden on ownership through AI, without disrupting the business or requiring a large technical team to maintain it. Three phases shaped the implementation.</p>
+
+    <div class="scope-grid">
+      <div class="scope-item">
+        <div class="scope-num">01</div>
+        <h4>Local AI Deployment</h4>
+        <p>Rather than purchasing an enterprise cloud platform, AI was deployed locally using the Paperclip agent framework — keeping sensitive payroll, employee, and financial data off third-party infrastructure while still accessing capable models. The implementation was matched to the company's actual workflows, not a generic template.</p>
+      </div>
+      <div class="scope-item">
+        <div class="scope-num">02</div>
+        <h4>Model Selection for the Use Case</h4>
+        <p>Different tasks perform differently across AI models. The engagement included hands-on selection and configuration of models suited to construction business operations. Research-heavy tasks, document generation, and data processing each got the right tool matched to the job.</p>
+      </div>
+      <div class="scope-item">
+        <div class="scope-num">03</div>
+        <h4>Staff Training on Practical AI Use</h4>
+        <p>Technology only works if people use it. The engagement included structured training for the team on prompt optimization and day-to-day AI utilization — so the tools became embedded in how work actually gets done, not just installed and forgotten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="section-inner">
+    <div class="section-label">The Results</div>
+    <h2>75% Less Payroll Effort. 60% Faster Invoicing. Real Evenings Back.</h2>
+    <p class="section-intro">Within months of implementation, three core administrative burdens were measurably reduced — not improved, reduced. The shift was from doing to deciding: AI handles the work, owners review and approve.</p>
+
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th>Before</th>
+          <th>After</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Employee lodging research</td>
+          <td>Hours of manual searching per booking across job sites</td>
+          <td>Review-and-approve — AI researches options, owner confirms</td>
+        </tr>
+        <tr>
+          <td>Invoice generation</td>
+          <td>Manual, time-intensive process for every completed job</td>
+          <td><strong>60% faster</strong> — AI handles drafting and formatting, owner reviews</td>
+        </tr>
+        <tr>
+          <td>Payroll processing (owner time)</td>
+          <td>Significant ownership hours required every payroll cycle</td>
+          <td><strong>75% reduction</strong> in owner time required per cycle</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="author-byline">
+      <div class="author-info">
+        <div class="author-name">Stephanie Culver</div>
+        <div class="author-title">AI Business Consultant | Fractional CTO</div>
+        <a href="https://www.linkedin.com/in/stephaniepculver/" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">What Actually Changed</div>
+    <h2>From Doing to Deciding — The Operational Shift That Matters for Owner-Operators</h2>
+    <p>The business still runs. Crews still get deployed. Invoices go out. Payroll gets processed. But the owners are no longer the bottleneck for every administrative function. AI handles the research, the drafting, and the data processing. Humans review, approve, and lead.</p>
+    <p style="margin-top: 16px; color: var(--text-mid); line-height: 1.7;">That's the shift: from doing to deciding. And the owners got back what they said they'd lost — not efficiency metrics, but actual evenings and weekends with their family.</p>
+
+    <div class="pull-quote">
+      <p>"We didn't need enterprise software. We needed AI matched to our actual problems."</p>
+    </div>
+
+    <div class="pull-quote">
+      <p>"Payroll effort from the owners is down 75%. That's time we're not getting back — except now we are."</p>
+    </div>
+
+    <div class="pull-quote">
+      <p>"The business still runs the same. We just don't have to run it manually anymore."</p>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="section-inner">
+    <div class="section-label">More from Stephanie Culver Advisory</div>
+    <h2>Explore the Other Case Study or See Our Services</h2>
+    <p style="color: var(--text-mid); font-size: 0.97rem; margin-bottom: 8px;">See how a coaching consultancy runs five business functions through AI agents — or explore the fixed-scope sprints that help businesses like this one get results in four to six weeks.</p>
+    <div class="case-study-links">
+      <a href="/case-studies/coaching-consultancy/">
+        <span class="link-label">Case Study · Coaching Consultancy</span>
+        How One Business Replaced a Department-Sized Workload with an AI Operating Model →
+      </a>
+      <a href="/#sprints">
+        <span class="link-label">Our Services</span>
+        Fixed-scope AI sprints — 4 to 6 weeks, fixed price, concrete deliverable →
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Frequently Asked Questions</div>
+    <h2>Common Questions About AI Implementation for Small and Family-Owned Businesses</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>How long does AI implementation take for a small business?</h3>
+        <p>For most small businesses, an initial AI implementation targeting one or two specific workflows takes four to twelve weeks. A focused engagement deploying AI for payroll processing, invoice generation, or research tasks can be live in six to eight weeks — including model selection, staff training, and workflow integration. The timeline depends on how complex existing systems are and how much change management is required. The construction company in this case study saw meaningful results within the first few months of engagement.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need a large IT team to implement AI in a construction company?</h3>
+        <p>No. Most AI implementations for small and mid-sized construction businesses do not require a dedicated IT team. Modern AI tools can be deployed locally — running on hardware you already own, with no cloud subscription required — and configured to match your existing workflows. What you need is someone who understands both the business processes and the AI tooling. That's the fractional CTO model: an experienced AI implementation specialist who designs the system, trains your staff, and hands off a solution your team can operate without ongoing technical overhead.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can AI really help with payroll and invoicing for a construction business?</h3>
+        <p>Yes — payroll processing and invoice generation are among the highest-value AI use cases for construction businesses. Both tasks are structured, repetitive, and time-consuming; exactly the profile where AI performs best. AI can handle data gathering, calculation, document generation, and formatting, leaving the owner to review and approve rather than execute from scratch. In this case study, payroll processing effort dropped 75% and invoice generation time dropped 60%.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is my business data safe when using AI locally?</h3>
+        <p>Local AI deployment means your data never leaves your network. Unlike cloud-based AI tools that send your data to a third-party server for processing, locally-hosted models run entirely on your own hardware. For a construction business handling employee data, financial records, and client information, this is often the right architecture — not because cloud AI is inherently unsafe, but because local deployment eliminates data residency and third-party access questions entirely.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is a fractional CTO and does my construction business need one?</h3>
+        <p>A fractional CTO is an experienced technology leader who works with your business on a part-time basis — giving you senior-level AI and technology strategy without the cost of a full-time executive hire. For a construction business, this typically means someone who identifies where AI can save the most owner time, selects the right tools, oversees implementation, and trains your team. If your owners are spending significant time on tasks that could be automated — payroll, invoicing, scheduling, lodging research — a fractional CTO engagement typically pays for itself quickly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Ready to get your evenings back?</h2>
+    <p>A 30-minute call is enough to identify where AI can make the biggest difference in your business. No commitment required.</p>
+    <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="btn-primary" target="_blank" rel="noopener">Schedule a Free 30-Minute Call →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Stephanie Culver &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/about">About</a> &nbsp;·&nbsp; <a href="/faq">FAQ</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/stephaniepculver/" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+
+<script>
+const toggle = document.getElementById('nav-toggle');
+const links = document.getElementById('nav-links');
+toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>

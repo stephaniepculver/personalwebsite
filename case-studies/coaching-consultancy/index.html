@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How a Coaching Consultancy Replaced a Department-Sized Workload with AI | Stephanie Culver</title>
+  <meta name="description" content="Accounting, marketing, technology, analysis, and operations — all running through AI agents. How one coaching consultancy built a multi-model AI operating model with Stephanie Culver, Fractional CTO.">
+  <link rel="canonical" href="https://stephaniepculver.com/case-studies/coaching-consultancy/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stephaniepculver.com/case-studies/coaching-consultancy/">
+  <meta property="og:title" content="How a Coaching Consultancy Replaced a Department-Sized Workload with AI | Stephanie Culver">
+  <meta property="og:description" content="Accounting, marketing, technology, analysis, and operations — all running through AI agents. How one coaching consultancy built a multi-model AI operating model with Stephanie Culver, Fractional CTO.">
+  <meta property="og:site_name" content="Stephanie Culver Advisory">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How a Coaching Consultancy Replaced a Department-Sized Workload with AI | Stephanie Culver">
+  <meta name="twitter:description" content="Accounting, marketing, technology, analysis, and operations — all running through AI agents. How one coaching consultancy built a multi-model AI operating model with Stephanie Culver, Fractional CTO.">
+  <link rel="stylesheet" href="../../consulting/style.css">
+  <style>
+    .author-byline {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin: 40px 0 32px;
+    }
+    .author-info .author-name { font-weight: 700; color: var(--navy); font-size: 0.97rem; }
+    .author-info .author-title { font-size: 0.85rem; color: var(--text-mid); margin-top: 2px; }
+    .author-info a { color: var(--blue); text-decoration: none; font-weight: 600; font-size: 0.85rem; display: inline-block; margin-top: 6px; }
+    .author-info a:hover { text-decoration: underline; }
+    .pull-quote {
+      border-left: 4px solid var(--accent);
+      padding: 16px 24px;
+      margin: 28px 0;
+      background: var(--off-white);
+      border-radius: 0 4px 4px 0;
+    }
+    .pull-quote p {
+      font-family: var(--font);
+      font-size: 1.12rem;
+      color: var(--navy);
+      font-style: italic;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .domain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      margin: 32px 0;
+    }
+    .domain-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 22px 22px 20px;
+    }
+    .domain-card .domain-icon {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .domain-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .domain-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; margin: 0; }
+    .model-stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .model-item {
+      padding: 16px 18px;
+      background: var(--navy);
+      border-radius: 6px;
+      color: #fff;
+    }
+    .model-item .model-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .model-item p { font-size: 0.82rem; color: rgba(255,255,255,0.68); line-height: 1.5; margin: 0; }
+    .case-study-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .case-study-links a {
+      display: block;
+      padding: 22px 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.93rem;
+      line-height: 1.45;
+      transition: border-color 0.18s;
+    }
+    .case-study-links a:hover { border-color: var(--blue); }
+    .case-study-links .link-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 7px;
+    }
+    .faq-list { margin-top: 8px; }
+    .faq-item { padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 { font-family: var(--font); font-size: 1.15rem; font-weight: 400; color: var(--navy); margin-bottom: 12px; line-height: 1.35; }
+    .faq-item p { font-size: 0.97rem; color: var(--text-mid); line-height: 1.7; }
+    @media (max-width: 640px) {
+      .case-study-links { grid-template-columns: 1fr; }
+      .model-stack { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Case Study",
+    "headline": "How a Coaching Consultancy Replaced a Department-Sized Workload with an AI Operating Model",
+    "description": "A coaching consultancy implemented a multi-agent AI operating model covering accounting, marketing, technology, analysis, and operations — orchestrated through Paperclip using Claude, Gemini, ChatGPT, and local models.",
+    "author": {
+      "@type": "Person",
+      "name": "Stephanie Culver",
+      "jobTitle": "AI Business Consultant | Fractional CTO",
+      "url": "https://stephaniepculver.com/about/",
+      "sameAs": "https://www.linkedin.com/in/stephaniepculver/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Stephanie Culver Advisory",
+      "url": "https://stephaniepculver.com/"
+    },
+    "datePublished": "2026-06-26",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://stephaniepculver.com/case-studies/coaching-consultancy/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can AI agents actually run a small business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI agents can handle most of the routine, process-driven work in a small business — accounting categorization, marketing content drafting, research synthesis, operations coordination, and reporting — while escalating decisions that require human judgment. In this case study, a coaching consultancy runs five distinct business functions through AI agents orchestrated by Paperclip, with the owner focusing on coaching rather than administration. The key is the right architecture: multiple specialized agents for different domains, with clear rules about what gets automated and what gets escalated."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What AI models work best for a coaching or consulting business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Different tasks call for different models. In this case study, Claude handles nuanced reasoning, long-form writing, and analysis that requires careful judgment — well-suited to a coaching business's content and client-facing work. Gemini is deployed for research synthesis and knowledge-heavy tasks. ChatGPT covers generalist workflows and broad execution. Local models process sensitive financial and client data that should never leave the business's own infrastructure. The right answer is rarely a single model — it's a deliberate stack where each model handles what it does best."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does multi-agent AI orchestration work for a small business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multi-agent orchestration means assigning different AI agents to different domains — accounting, marketing, operations, etc. — and having a coordination layer that routes tasks, manages handoffs, and keeps work moving without a human in the loop for every step. In this case study, Paperclip serves as the orchestration layer: agents for each business domain work autonomously within defined parameters and escalate to the owner only when a decision requires human judgment. The result is a business that runs with far less manual coordination."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is sensitive client data safe when using AI agents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Data safety in a multi-agent AI system depends on the architecture. Sensitive data — client records, financial information, personal details — should be handled by locally-hosted models that never send that data to a third-party server. In this case study, local models are specifically designated for sensitive financial and client data, while cloud models handle tasks where data sensitivity is lower. A properly designed AI operating model has explicit data-handling rules for each agent: what data it can access, what it can send externally, and what must stay on-premise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does an AI operating model cost for a small consulting or coaching business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The cost of an AI operating model for a small business depends on the scope of implementation and the models used. Cloud-based AI APIs (Claude, Gemini, ChatGPT) charge per use and typically cost a few hundred dollars per month at small-business scale. Local model deployment requires hardware investment upfront but eliminates per-call costs and keeps sensitive data private. Implementation and architecture design — the fractional CTO engagement — is scoped to the business's needs. A 30-minute discovery call with Stephanie Culver Advisory is the right place to get a realistic cost range for your situation."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav>
+    <a href="/" class="logo">
+      <span class="logo-name">Stephanie Culver</span>
+      <span class="logo-sub">AI Consulting</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/about" class="nav-link">About</a>
+      <span class="nav-section-label">Sprints</span>
+      <a href="/consulting/ai-transformation-sprint.html" class="nav-link">AI Transformation</a>
+      <a href="/consulting/ai-governance-sprint.html" class="nav-link">AI Governance</a>
+      <a href="/consulting/platform-velocity-sprint.html" class="nav-link">Platform Velocity</a>
+      <a href="/consulting/cloud-roi-sprint.html" class="nav-link">Cloud ROI</a>
+      <span class="nav-section-label">Case Studies</span>
+      <a href="/case-studies/construction-company/" class="nav-link">Construction Company</a>
+      <a href="/case-studies/coaching-consultancy/" class="nav-link" aria-current="page">Coaching Consultancy</a>
+      <a href="/faq" class="nav-link">FAQ</a>
+      <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<section class="hero" style="padding: 60px 24px 52px;">
+  <div class="hero-inner">
+    <span class="hero-label">Case Study · Coaching · Agentic AI Operations</span>
+    <h1>One owner. Five business functions. Zero additional hires.</h1>
+    <p class="hero-sub">How a coaching consultancy replaced a department-sized workload with a coordinated AI operating model — running accounting, marketing, technology, analysis, and operations through purpose-built agents.</p>
+    <div class="hero-actions">
+      <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="btn-primary" target="_blank" rel="noopener">Schedule a Free 30-Minute Call →</a>
+      <a href="/#sprints" class="btn-secondary">See Our Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-stat">
+      <span class="num">5 Domains</span>
+      <span class="lbl">Accounting, marketing, tech, analysis &amp; operations covered</span>
+    </div>
+    <div class="proof-stat">
+      <span class="num">4 Models</span>
+      <span class="lbl">Claude · Gemini · ChatGPT · Local — right model, right job</span>
+    </div>
+    <div class="proof-stat">
+      <span class="num">0 New Hires</span>
+      <span class="lbl">Department-sized coverage without adding headcount</span>
+    </div>
+    <div class="proof-stat">
+      <span class="num">Paperclip</span>
+      <span class="lbl">Orchestration layer connecting all agents and workflows</span>
+    </div>
+  </div>
+</div>
+
+<section class="section bg-light">
+  <div class="section-inner">
+    <div class="section-label">The Problem</div>
+    <h2>Coaching Consultancies Face a Structural Trap — The Expert Runs Everything</h2>
+    <p class="section-intro">The person with the expertise is also the person running the business. Accounting, marketing, data analysis, operations coordination, and technology management each demand attention — and in a small consultancy, all of it falls on the owner.</p>
+
+    <div class="two-col">
+      <div>
+        <h3>Where the owner's time was going</h3>
+        <ul>
+          <li>Manual financial tracking and categorization instead of automated reporting</li>
+          <li>Marketing content creation, scheduling, and performance review handled personally</li>
+          <li>Technology decisions and vendor management without a technical function</li>
+          <li>Business intelligence gathered by request rather than available on-demand</li>
+          <li>Operations coordination managed through the owner rather than an orchestration layer</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The traditional answer — and why it didn't fit</h3>
+        <ul>
+          <li>Hiring for five distinct functions is expensive and premature for a consultancy at this scale</li>
+          <li>Fractional specialists for each domain adds coordination overhead</li>
+          <li>The owner wanted more time on client work, not managing a larger team</li>
+          <li>The modern answer is a different architecture: AI agents assigned to each domain, escalating only when a human decision is actually needed</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">The Approach</div>
+    <h2>A Multi-Agent AI Operating Model — One Orchestration Layer, Five Business Domains</h2>
+    <p class="section-intro">This client worked with AIC to implement a coordinated AI operating model using the Paperclip platform. Instead of hiring for each function, AI agents were assigned to each domain — working autonomously within defined parameters and escalating decisions that require human judgment.</p>
+
+    <div class="deliverable-box">
+      <h3>How the operating model was designed</h3>
+      <ul>
+        <li><strong>Domain-specific agents:</strong> Each business function — accounting, marketing, technology, analysis, and operations — has a dedicated AI agent configured for that domain's tasks, data sources, and escalation rules.</li>
+        <li><strong>Multi-model architecture:</strong> No single AI model handles everything. Each model was assigned to the tasks it handles best, with explicit data-handling rules for each.</li>
+        <li><strong>Paperclip orchestration:</strong> The coordination layer routes tasks between agents, manages handoffs, and surfaces decisions that need the owner — without requiring a human coordinator in the loop for routine work.</li>
+        <li><strong>Human-in-the-loop for decisions:</strong> Autonomous execution for routine work; escalation to the owner for anything requiring judgment, relationship context, or business strategy.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="section-inner">
+    <div class="section-label">The AI Stack</div>
+    <h2>The Right Model for the Right Job — A Deliberately Multi-Model Architecture</h2>
+    <p class="section-intro">Every AI model has different strengths. This implementation assigned each model to the tasks it handles best — rather than forcing a single model to do everything.</p>
+
+    <div class="model-stack">
+      <div class="model-item">
+        <div class="model-name">Claude</div>
+        <p>Nuanced reasoning, long-form writing, and analysis requiring careful judgment. Handles content that reflects the owner's voice and client-facing materials.</p>
+      </div>
+      <div class="model-item">
+        <div class="model-name">Gemini</div>
+        <p>Research synthesis, data summarization, and knowledge-intensive tasks. Deployed where broad information retrieval and synthesis is the core need.</p>
+      </div>
+      <div class="model-item">
+        <div class="model-name">ChatGPT</div>
+        <p>Broad task execution across generalist workflows. Handles the high-volume, varied tasks that don't require specialized model capabilities.</p>
+      </div>
+      <div class="model-item">
+        <div class="model-name">Local Models</div>
+        <p>Sensitive financial and client data that must never leave the business's infrastructure. Full privacy — no data sent to external servers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">The Five Domains</div>
+    <h2>Accounting, Marketing, Technology, Analysis, and Operations — All Through AI Agents</h2>
+    <p class="section-intro">Each business domain has an AI layer. Routine work is automated. Decisions go to humans. The owner spends time on coaching.</p>
+
+    <div class="domain-grid">
+      <div class="domain-card">
+        <div class="domain-icon">Accounting &amp; Finance</div>
+        <h3>Automated financial tracking and reporting</h3>
+        <p>Routine financial tracking, categorization, and reporting handled by AI agents — surfacing anomalies and summaries for human review rather than requiring manual data entry.</p>
+      </div>
+      <div class="domain-card">
+        <div class="domain-icon">Marketing</div>
+        <h3>Content planning, drafting, and performance</h3>
+        <p>Content planning, drafting, scheduling, and performance analysis managed through an AI marketing layer. Brand voice stays consistent; manual lifting disappears.</p>
+      </div>
+      <div class="domain-card">
+        <div class="domain-icon">Technology</div>
+        <h3>Infrastructure and vendor management</h3>
+        <p>Infrastructure monitoring, vendor evaluation, and technical decision support — keeping the business on a sound technical footing without a dedicated IT function.</p>
+      </div>
+      <div class="domain-card">
+        <div class="domain-icon">Data Analysis</div>
+        <h3>On-demand business intelligence</h3>
+        <p>On-demand analysis rather than scheduled manual reporting. Ask a question, get an answer from your own operational data — no analyst required.</p>
+      </div>
+      <div class="domain-card">
+        <div class="domain-icon">Operations Coordination</div>
+        <h3>The connective tissue — Paperclip orchestrates all of it</h3>
+        <p>Paperclip routes tasks across all domains, manages handoffs, and keeps operations moving without a human coordinator in the loop for every step.</p>
+      </div>
+    </div>
+
+    <div class="author-byline">
+      <div class="author-info">
+        <div class="author-name">Stephanie Culver</div>
+        <div class="author-title">AI Business Consultant | Fractional CTO</div>
+        <a href="https://www.linkedin.com/in/stephaniepculver/" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="section-inner">
+    <div class="section-label">The Result</div>
+    <h2>A Coaching Business with Department-Sized Functional Coverage — Without Hiring a Department</h2>
+    <p>The owner spends time on coaching. Paperclip handles the rest. This is what "AI-augmented operations" actually looks like in practice: not a single chatbot, but a coordinated system of purpose-built agents working together under one orchestration layer.</p>
+    <p style="margin-top: 16px; color: var(--text-mid); line-height: 1.7;">The business doesn't run itself — but it runs with far less manual effort than it used to. And the decisions that go to the owner are the ones that actually require her judgment.</p>
+
+    <div class="pull-quote">
+      <p>"We use Claude for reasoning, Gemini for research, ChatGPT for execution, and local models for anything sensitive. The right model for the right job."</p>
+    </div>
+
+    <div class="pull-quote">
+      <p>"The business doesn't run itself — but it runs with a lot less manual effort than it used to."</p>
+    </div>
+
+    <div class="pull-quote">
+      <p>"I spend my time on coaching. Paperclip handles the rest."</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">More from Stephanie Culver Advisory</div>
+    <h2>See the Other Case Study or Explore Our Services</h2>
+    <p style="color: var(--text-mid); font-size: 0.97rem; margin-bottom: 8px;">See how a family-owned construction company cut payroll effort by 75% and got their evenings back — or explore the fixed-scope sprints designed to deliver measurable AI results in four to six weeks.</p>
+    <div class="case-study-links">
+      <a href="/case-studies/construction-company/">
+        <span class="link-label">Case Study · Construction Company</span>
+        75% Less Payroll Effort and 60% Faster Invoicing — AI for Family-Owned Construction →
+      </a>
+      <a href="/#sprints">
+        <span class="link-label">Our Services</span>
+        Fixed-scope AI sprints — 4 to 6 weeks, fixed price, concrete deliverable →
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="section-inner">
+    <div class="section-label">Frequently Asked Questions</div>
+    <h2>Common Questions About AI Agents and Operating Models for Small Businesses</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Can AI agents actually run a small business?</h3>
+        <p>AI agents can handle most of the routine, process-driven work in a small business — accounting categorization, marketing content drafting, research synthesis, operations coordination, and reporting — while escalating decisions that require human judgment. In this case study, a coaching consultancy runs five distinct business functions through AI agents orchestrated by Paperclip, with the owner focusing on coaching rather than administration. The key is the right architecture: multiple specialized agents for different domains, with clear rules about what gets automated and what gets escalated.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What AI models work best for a coaching or consulting business?</h3>
+        <p>Different tasks call for different models. Claude handles nuanced reasoning, long-form writing, and analysis requiring careful judgment — well-suited to content and client-facing work. Gemini is strong for research synthesis and knowledge-heavy tasks. ChatGPT covers generalist workflows and broad execution. Local models process sensitive financial and client data that should never leave the business's own infrastructure. The right answer is rarely a single model — it's a deliberate stack where each model handles what it does best.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How does multi-agent AI orchestration work for a small business?</h3>
+        <p>Multi-agent orchestration means assigning different AI agents to different domains — accounting, marketing, operations, etc. — and having a coordination layer that routes tasks, manages handoffs, and keeps work moving without a human in the loop for every step. In this case study, Paperclip serves as the orchestration layer: agents for each business domain work autonomously within defined parameters and escalate to the owner only when a decision requires human judgment.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is sensitive client data safe when using AI agents?</h3>
+        <p>Data safety in a multi-agent AI system depends on the architecture. Sensitive data — client records, financial information, personal details — should be handled by locally-hosted models that never send data to a third-party server. In this case study, local models are specifically designated for sensitive financial and client data, while cloud models handle tasks where data sensitivity is lower. A properly designed AI operating model has explicit data-handling rules for each agent: what data it can access, what it can send externally, and what must stay on-premise.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What does an AI operating model cost for a small consulting or coaching business?</h3>
+        <p>The cost depends on scope and the models used. Cloud-based AI APIs (Claude, Gemini, ChatGPT) charge per use and typically cost a few hundred dollars per month at small-business scale. Local model deployment requires upfront hardware investment but eliminates per-call costs and keeps sensitive data private. Implementation and architecture design — the fractional CTO engagement — is scoped to the business's specific needs. A 30-minute discovery call with Stephanie Culver Advisory is the right place to get a realistic estimate for your situation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Ready to build your AI operating model?</h2>
+    <p>A 30-minute call is enough to map the highest-value AI opportunities in your business. No commitment required.</p>
+    <a href="https://calendar.app.google/pHjNMnkVQ1afNRvJA" class="btn-primary" target="_blank" rel="noopener">Schedule a Free 30-Minute Call →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Stephanie Culver &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/about">About</a> &nbsp;·&nbsp; <a href="/faq">FAQ</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/stephaniepculver/" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+
+<script>
+const toggle = document.getElementById('nav-toggle');
+const links = document.getElementById('nav-links');
+toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>
